@@ -1,0 +1,30 @@
+use_gpu: True
+device: 0
+seed: 12345
+federate:
+  mode: standalone
+  client_num: 2
+  total_round_num: 30
+  sample_client_rate: 1
+data:
+  type: file
+  file_path: ./federatedscope/contrib/data/DRIVE.pkl
+  splits: [0.6,0.2,0.2]
+  subsample: 0.05
+  transform: [['ToTensor'], ['RandomCrop', {'size': [64]}]]
+dataloader:
+  batch_size: 10
+model:
+  type: UNet
+train:
+  local_update_steps: 1
+  batch_or_epoch: epoch
+  optimizer:
+    lr: 0.01
+    weight_decay: 0.0
+grad:
+  grad_clip: 5.0
+criterion:
+  type: BCELoss
+trainer:
+  type: cvtrainer
