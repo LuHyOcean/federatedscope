@@ -289,6 +289,14 @@ We put the API references on our [website](https://federatedscope.io/refs/index)
 
 Besides, we provide documents for [executable scripts](https://github.com/alibaba/FederatedScope/tree/master/scripts) and [customizable configurations](https://github.com/alibaba/FederatedScope/tree/master/federatedscope/core/configs).
 
+## UNet Drive
+
+```shell
+python federatedscope/main.py --cfg scripts/unet_drive_scripts/UNet.yaml
+```
+
+运行shell后，输出和日志的路径`exp/FedAvg_UNet_on_file_lr0.01_lstep1`
+
 ## License
 
 FederatedScope is released under Apache License 2.0.
