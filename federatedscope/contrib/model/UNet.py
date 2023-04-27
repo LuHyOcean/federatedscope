@@ -82,7 +82,6 @@ class UNet(nn.Module):
                             bias=False,
                         ),
                     ),
-                    (name + "vb", VariationalBottleneck(features)),
                     (name + "norm1", nn.BatchNorm2d(num_features=features)),
                     (name + "relu1", nn.ReLU(inplace=True)),
                     (
@@ -97,7 +96,7 @@ class UNet(nn.Module):
                     ),
                     (name + "norm2", nn.BatchNorm2d(num_features=features)),
                     (name + "relu2", nn.ReLU(inplace=True)),
-
+                    (name + "vb", VariationalBottleneck(features)),
                 ]
             )
         )
