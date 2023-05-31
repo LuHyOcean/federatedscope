@@ -2,7 +2,6 @@ from collections import OrderedDict
 import torch
 import torch.nn as nn
 
-from federatedscope.contrib.model.VariationalBottleneck import VariationalBottleneck
 
 channel=4
 num_classes = 1
@@ -96,7 +95,6 @@ class UNet(nn.Module):
                     ),
                     (name + "norm2", nn.BatchNorm2d(num_features=features)),
                     (name + "relu2", nn.ReLU(inplace=True)),
-                    (name + "vb", VariationalBottleneck(features)),
                 ]
             )
         )
