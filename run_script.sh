@@ -1,0 +1,1 @@
+python federatedscope/main.py --cfg scripts/unet_drive_scripts/UNet.yaml
