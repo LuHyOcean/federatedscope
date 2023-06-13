@@ -2,8 +2,10 @@
     <img src="https://ocean-1317261461.cos.ap-chengdu.myqcloud.com/img/secfed.png" width="250" alt="secfed-logo">
 </h1>
 
-![](https://img.shields.io/badge/language-python-blue.svg)
-![](https://img.shields.io/badge/env-conda-brightgreen)
+<p align="center">
+    <img src="https://img.shields.io/badge/language-python-blue.svg">
+    <img src="https://img.shields.io/badge/env-conda-brightgreen">
+</p>
 
 **SecFed**——**面向云边安全协作的联邦学习平台，以应对掉线节点干扰、梯度泄露攻击等安全挑战**。该平台利用协作学习实现模型性能提升，无需将数据集中到中央服务器，以保护数据隐私，
 
