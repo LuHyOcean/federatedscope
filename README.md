@@ -2,7 +2,6 @@
     <img src="https://ocean-1317261461.cos.ap-chengdu.myqcloud.com/img/secfed.png" width="250" alt="secfed-logo">
 </h1>
 
-
 ![](https://img.shields.io/badge/language-python-blue.svg)
 ![](https://img.shields.io/badge/env-conda-brightgreen)
 
@@ -55,11 +54,11 @@ FederatedScope
 
 ## 部署文档
 
-We provide an end-to-end example for users to start running a standard FL course with FederatedScope.
+以下提供了一个在DRIVE数据集上做医学图像分割的联邦学习实例
 
 ### Step 1. clone
 
-First of all, users need to clone the source code and install the required packages (we suggest python version >= 3.9).
+克隆源码到本地
 
 ```bash
 git clone https://github.com/LuHyOcean/federatedscope.git
@@ -67,37 +66,36 @@ cd federatedscope
 ```
 #### Step 2. 环境配置 （ Use Conda ）
 
-We recommend using a new virtual environment to install FederatedScope:
+推荐使用conda虚拟环境创建项目
 
 ```bash
 conda create -n fs python=3.9
 conda activate fs
 ```
 
-If your backend is torch, please install torch in advance ([torch-get-started](https://pytorch.org/get-started/locally/)). For example, if your cuda version is 11.3 please execute the following command:
+如果您的后端是torch，请提前安装torch ([torch-get-started](https://pytorch.org/get-started/locally/))。例如，如果你的cuda版本是11.3，请执行以下命令:
 
 ```bash
 conda install -y pytorch=1.10.1 torchvision=0.11.2 torchaudio=0.10.1 torchtext=0.11.1 cudatoolkit=11.3 -c pytorch -c conda-forge
 ```
 
-For users with Apple M1 chips:
+对于使用Apple M1芯片的用户:
 ```bash
 conda install pytorch torchvision torchaudio -c pytorch
 # Downgrade torchvision to avoid segmentation fault
 python -m pip install torchvision==0.11.3
 ```
 
-Finally, after the backend is installed, you can install FederatedScope from `source`:
+最后，环境配置后后，你可以从`source`安装SecFed:
 
 ##### From source
 
 ```bash
 # Editable mode
 pip install -e .
-
 ```
 
-Now, you have successfully installed the minimal version of FederatedScope. 
+现在，您已经成功安装了SecFed的最小版本。
 
 #### Step 3. 医学图像分割实例 （ UNet_Drive ）
 
